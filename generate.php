@@ -6,6 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $gen = new passwordGenerator();
 echo $gen->useUpperCase()
-		 ->useSymbols()
-		 ->generate()
-		 ->getPassword();
+    ->useSymbols()
+    ->useNumbers()
+    ->generate()
+    ->getPassword();

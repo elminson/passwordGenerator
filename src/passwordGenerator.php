@@ -36,7 +36,7 @@ class passwordGenerator
 	 *
 	 * @return $this
 	 */
-	public function setPasswordLength($length)
+	public function setPasswordLength($length = 36)
 	{
 
 		$this->passwordLength = $length;

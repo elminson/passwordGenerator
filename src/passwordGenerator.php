@@ -84,6 +84,11 @@ class passwordGenerator
 	public function generate()
 	{
 
+		// Strong password can't be < 9 chars
+		if ($this->passwordLength < 9) {
+			$this->passwordLength = 8;
+		}
+
 		$maxLength = count($this->passwordString) - 1;
 		for ($x = 0; $x <= $this->passwordLength; $x++) {
 

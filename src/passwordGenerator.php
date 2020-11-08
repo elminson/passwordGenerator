@@ -32,6 +32,8 @@ class passwordGenerator
 	}
 
 	/**
+	 * This set the password length
+	 *
 	 * @param $length
 	 *
 	 * @return $this
@@ -46,6 +48,8 @@ class passwordGenerator
 
 
 	/**
+	 * Add numbers to generate the password
+	 *
 	 * @return $this
 	 */
 	public function useNumbers()
@@ -57,6 +61,8 @@ class passwordGenerator
 	}
 
 	/**
+	 * Add upper case characters to generate the password
+	 *
 	 * @return $this
 	 */
 	public function useUpperCase()
@@ -68,6 +74,8 @@ class passwordGenerator
 	}
 
 	/**
+	 * Add symbols characters to generate the password
+	 *
 	 * @return $this
 	 */
 	public function useSymbols()
@@ -79,6 +87,8 @@ class passwordGenerator
 	}
 
 	/**
+	 * Generate the password
+	 *
 	 * @return $this
 	 */
 	public function generate()
@@ -102,10 +112,16 @@ class passwordGenerator
 	}
 
 	/**
+	 * Return the password
+	 *
 	 * @return string
 	 */
 	public function getPassword()
 	{
+
+		if (empty($this->tempPassword)) {
+			$this->generate();
+		}
 
 		return $this->tempPassword;
 	}

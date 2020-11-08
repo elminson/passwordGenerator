@@ -55,7 +55,7 @@ class passwordGenerator
 	public function useNumbers()
 	{
 
-		$this->passwordString .= range('0', '9');
+        $this->passwordString = array_merge($this->passwordString, range(0, 9));
 
 		return $this;
 	}
